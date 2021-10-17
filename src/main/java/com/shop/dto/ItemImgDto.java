@@ -9,12 +9,18 @@ import org.modelmapper.ModelMapper;
 public class ItemImgDto {
 
     private Long id;
+
     private String imgName;
+
     private String oriImgName;
+
     private String imgUrl;
+
     private String repImgYn;
-    private static ModelMapper modelMapper = new ModelMapper(); // modelmapper 라이브러리 추가 후 객체사용
-    public static ItemImgDto of(ItemImg itemImg){
+
+    private static ModelMapper modelMapper = new ModelMapper(); // modelmapper 라이브러리 pom.xml에 추가!
+
+    public static ItemImgDto of(ItemImg itemImg) {
         return modelMapper.map(itemImg,ItemImgDto.class);
     }
 

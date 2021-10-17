@@ -10,7 +10,7 @@ import java.util.UUID;
 @Service
 @Log
 public class FileService {
-    // 파일 업로드
+    // 업로드: 파일명
     public String uploadFile(String uploadPath, String originalFileName, byte[] fileData) throws Exception{
         UUID uuid = UUID.randomUUID(); // 파일명 중복 방지
         String extension = originalFileName.substring(originalFileName.lastIndexOf(".")); // 원본 파일명에서 확장자 분리
